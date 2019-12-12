@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="dependencias/bootstrap/dist/css/bootstrap.css">
+	<meta charset="UTF-8">
+	<title>MongoDB</title>
+	<style type="text/css">
+		body{
+			background-color: #F8F8FF;
+		}
+		header{
+			height: 160px;
+			margin-top: 20px;
+			background-color: #F8F8FF;
+		}
+		span{
+			color: red;
+			font-weight: bold;
+		}
+		p{
+			font-weight: bold;
+		}
+		header h2{
+			color: white;
+			margin-top: 10px;
+		}
+		footer{
+			height: 55px;
+			background-color: #F8F8FF;
+		}
+		footer p{
+			color: black;
+		}
+		h2{
+			color: black;
+		}
+		h3{
+			color: black;
+		}
+		.table{
+			color: black;
+		}
+		img{
+			height: 180px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="text-center"><img src="images/logo.png"></div>
+		</header>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>RG</th>
+					<th>Idade</th>
+					<th>Cidade</th>
+					<th>Ação</th>
+				</tr>
+				<tr>
+					<td><input class="form-control nome-input"></td>
+					<td><input class="form-control cpf-input"></td>
+					<td><input class="form-control rg-input"></td>
+					<td><input class="form-control idade-input"></td>
+					<td><input class="form-control cidade-input"></td>
+					<td><button class="btn btn-primary add-registro">Adicionar</button></td>
+				</tr>
+			</thead>
+			<tbody class="registros-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="registros-list-template">
+	<td><span class="nome"><%= nome %></span></td>
+	<td><span class="cpf"><%= cpf %></span></td>
+	<td><span class="rg"><%= rg %></span></td>
+	<td><span class="idade"><%= idade %></span></td>
+	<td><span class="cidade"><%= cidade %></span></td>
+	<td><button class="btn btn-warning edit-registro">Editar</button> <button class="btn btn-danger delete-registro">Deletar</button><button class="btn btn-success update-registro" style="display:none">Atualizar</button> <button class="btn btn-danger cancel" style="display:none">Cancelar</button></td>
+
+	</script>
+	
+	<script src="dependencias/jquery/dist/jquery.js"></script>
+	<script src="dependencias/underscore/underscore.js"></script>
+	<script src="dependencias/backbone/backbone.js"></script>
+	<script src="js/scripts.js"></script>
+	<footer><hr><p class="text-center">© 2019-2019</p></footer>
+</body>
+</html>
